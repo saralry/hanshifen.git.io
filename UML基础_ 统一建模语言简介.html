@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<!-- saved from url=(0053)https://www.ibm.com/developerworks/cn/rational/r-uml/ -->
+<html lang="zh-CN" style="" class="applicationcache geolocation history postmessage svg websockets localstorage sessionstorage websqldatabase webworkers hashchange pointerevents canvas audio canvastext video webgl cssgradients multiplebgs opacity rgba inlinesvg hsla supports svgclippaths smil no-touchevents fontface generatedcontent textshadow cssanimations backgroundsize borderimage borderradius boxshadow csscolumns csscolumns-width csscolumns-span csscolumns-fill csscolumns-gap csscolumns-rule csscolumns-rulecolor csscolumns-rulestyle csscolumns-rulewidth csscolumns-breakbefore csscolumns-breakafter csscolumns-breakinside flexbox flexboxlegacy cssreflections csstransforms csstransforms3d csstransitions indexeddb indexeddb-deletedatabase js ibm-v18 ibm-cxtype-4g hires mac chrome chrome7 webkit webkit5 ibm-grid-xlarge greater-china-imt"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+<meta name="viewport" content="width=device-width, initial-scale=1">      
+<link rel="icon" href="https://www.ibm.com/favicon.ico">
+<link rel="canonical" href="http://www.ibm.com/developerworks/cn/rational/r-uml/index.html">
+<meta name="geo.country" content="CN">
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2004">
+<meta name="dcterms.date" content="2004-02-01">
+<meta name="description" content="回顾20世纪晚期--准确地说是1997年，OMG组织（Object Management Group对象管理组织）发布了统一建模语言（Unified Modeling Language，UML）。UML的目标之一就是为开发团队提供标准通用的设计语言来开发和构建计算机应用。UML提出了一套IT专业人员期待多年的统一的标准建模符号。通过使用UML，这些人员能够阅读和交流系统架构和设计规划--就像建筑工人多年来所使用的建筑设计图一样。">	
+<meta name="keywords" content="UML, dddrca">
+<meta name="robots" content="index,follow">
+<title>UML基础: 统一建模语言简介</title>
+    
+<script id="loadedViaBxAnalytics-HU3dbkAG5wE0F1IkRf9S1RexlAqo3jby" src="./UML基础_ 统一建模语言简介_files/analytics.min.js" type="text/javascript" async=""></script><script type="text/javascript" async="" charset="utf-8" id="utag_136" src="./UML基础_ 统一建模语言简介_files/survey.js"></script><script type="text/javascript" async="" charset="utf-8" id="utag_19" src="./UML基础_ 统一建模语言简介_files/hotjar-42920.js"></script><script type="text/javascript" async="" charset="utf-8" id="utag_53" src="./UML基础_ 统一建模语言简介_files/js"></script><script type="text/javascript" async="" charset="utf-8" id="tealium_cormetrics2" src="./UML基础_ 统一建模语言简介_files/eluminate.js"></script><script src="./UML基础_ 统一建模语言简介_files/bluemix-analytics.min.js" type="application/javascript" async=""></script><script type="text/javascript" async="" charset="utf-8" id="dle_api_5d937f58aa60cc360bdc85ac42ee7cc0e3949c2bb6f627c92a9f12ca171b32b8" src="./UML基础_ 统一建模语言简介_files/p_5d937f58aa60cc360bdc85ac42ee7cc0e3949c2bb6f627c92a9f12ca171b32b8.js"></script><script src="./UML基础_ 统一建模语言简介_files/p_devwrks.js" type="application/javascript" async=""></script><script src="./UML基础_ 统一建模语言简介_files/utag.js" type="application/javascript" async=""></script><script src="./UML基础_ 统一建模语言简介_files/callback=_dl.fn.lotame.callback" type="application/javascript" async=""></script><script src="./UML基础_ 统一建模语言简介_files/p_5d937f58aa60cc360bdc85ac42ee7cc0e3949c2bb6f627c92a9f12ca171b32b8.js" type="application/javascript" async=""></script><script> 
+    digitalData = {
+        "page":{
+            "category":{
+                "primaryCategory":"SOFDCRATCN"
+            },
+            "pageInfo":{
+                "effectiveDate":"2004-02-01",
+                "language":"zh-CN",
+                "publishDate":"2004-02-01",
+                "publisher":"IBM Corporation",
+                "version":"v18",
+                "ibm":{ 
+                    "contentDelivery":"IBM developerWorks template",
+                    "contentProducer":"IBM developerWorks",
+                    "country":"CN",
+                    "owner":"developerWorks/China/IBM",
+                    "siteID":"DEVWRKS",
+                    "subject":"B7S000,SW700",
+                    "type":"CT316",
+                    "topic":"应用开发,最佳实践",
+                    "topicId":"263,487",
+                    "contentArea":"rational",
+                    "contentAreaId":"13",
+                    "contentType":"article",
+                    "contentId":"53528",
+                },
+                "keywords":"UML, dddrca",
+                "description":"回顾20世纪晚期--准确地说是1997年，OMG组织（Object Management Group对象管理组织）发布了统一建模语言（Unified Modeling Language，UML）。UML的目标之一就是为开发团队提供标准通用的设计语言来开发和构建计算机应用。UML提出了一套IT专业人员期待多年的统一的标准建模符号。通过使用UML，这些人员能够阅读和交流系统架构和设计规划--就像建筑工人多年来所使用的建筑设计图一样。"
+            }
+        }
+    };
+    window._analytics = {
+        "coremetrics": false,
+        "optimizely": false,
+        "googleAddServices": false,
+        "addRoll": false,
+        "intercom": false,
+        "fullStory": false,
+        "hotjar": false,
+        "tealeaf": false,
+        "nps": false,
+        "segment_key": 'HU3dbkAG5wE0F1IkRf9S1RexlAqo3jby'
+    };
+</script>
+	
+    <meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@developerworks">
+<meta property="og:title" content="统一建模语言简介">
+<meta property="og:description" content="回顾20世纪晚期--准确地说是1997年，OMG组织（Object Management Group对象管理组织）发布了统一建模语言（Unified Modeling Language，UML）。UML的目标之一就是为开发团队提供标准通用的设计语言来开发和构建计算机应用。UML提出了一套IT专业人员期待多年的统一的标准建模符号。通过使用UML，这些人员能够阅读和交流系统架构和设计规划--就像建筑工人多年来所使用的建筑设计图一样。">
+    <meta property="og:image" content="http://www.ibm.com/developerworks/i/dw-social-201508.png">
+<!-- Segment meta tag -->
+<meta name="segment" property="developerWorks (developerWorks)" producttitle="developerWorks" value="Continuous Engineering Chinese (developerWorks)">      
+<!-- SITE MON : START (DO NOT DELETE) -->
+<!-- developerWorks monitoring token -->
+<!-- SITE MON : END (DO NOT DELETE) -->
+
+<!-- HEADER_SCRIPTS_AND_CSS_INCLUDE -->
+<!-- <script src="//cdn.optimizely.com/js/5399420604.js"></script> -->
+<!-- BEGIN: Use this section to set page specific variables for the Page Tag -->
+<script language="JavaScript">var NTPT_PGEXTRA="ibmSkillLevel=1&ibmCmaId=53528&ibmContentAreas=rational";</script>
+<!--END -->
+<script src="./UML基础_ 统一建模语言简介_files/ida_stats.js"></script><meta property="og:type" content="website"><meta property="og:url" content="http://www.ibm.com/developerworks/cn/rational/r-uml/index.html"><meta property="og:locale" content="zh_CN"><meta property="og:published_time" content="2004-02-01"><meta property="article:published_time" content="2004-02-01"><img width="1" height="1" src="./UML基础_ 统一建模语言简介_files/genp=pageinit">
+<link href="./UML基础_ 统一建模语言简介_files/www.css" rel="stylesheet">
+<link href="./UML基础_ 统一建模语言简介_files/syntaxhighlighter.css" rel="stylesheet">
+<script src="./UML基础_ 统一建模语言简介_files/www.js"></script><style></style>
+<script src="./UML基础_ 统一建模语言简介_files/syntaxhighlighter.js"></script>    
+<link href="./UML基础_ 统一建模语言简介_files/tables.css" rel="stylesheet">
+<script src="./UML基础_ 统一建模语言简介_files/tables.js"></script>   
+<!--  Masthead/footer  -->
+<link href="./UML基础_ 统一建模语言简介_files/dw-mf-v18.css" rel="stylesheet">
+<!-- <link href="//dw1.s81c.com/developerworks/css/dw-mf/v18/alt-signedin-ux.css" rel="stylesheet" /> -->   
+<!--[if lt IE 9]>
+    <link href="//dw1.s81c.com/developerworks/css/dw-mf/v18/dw-mf-ie8fix.css?v=022216" rel="stylesheet" />
+<![endif]-->
+<link href="./UML基础_ 统一建模语言简介_files/dw-article.css" rel="stylesheet">
+<script src="./UML基础_ 统一建模语言简介_files/dw-auth-properties.js"></script>
+<script src="./UML基础_ 统一建模语言简介_files/dw-auth.js"></script>
+<script src="./UML基础_ 统一建模语言简介_files/dw-mf.js"></script>
+<script src="./UML基础_ 统一建模语言简介_files/dw-include.js"></script>     
+<script src="./UML基础_ 统一建模语言简介_files/dw-article.js"></script>
+<script src="./UML基础_ 统一建模语言简介_files/dw-auto-links.js"></script>     
+<script src="./UML基础_ 统一建模语言简介_files/tactic.js"></script>
+<script src="./UML基础_ 统一建模语言简介_files/tacticbindlinks.js"></script>
+
+<!-- 
+<PageMap>
+    <DataObject type="document">
+        <Attribute name="topic">应用开发,最佳实践</Attribute>
+        <Attribute name="topicId">263,487</Attribute>
+        <Attribute name="contentArea">rational</Attribute>
+        <Attribute name="contentAreaId">13</Attribute>
+        <Attribute name="abstract">回顾20世纪晚期--准确地说是1997年，OMG组织（Object Management Group对象管理组织）发布了统一建模语言（Unified Modeling Language，UML）。UML的目标之一就是为开发团队提供标准通用的设计语言来开发和构建计算机应用。UML提出了一套IT专业人员期待多年的统一的标准建模符号。通过使用UML，这些人员能够阅读和交流系统架构和设计规划--就像建筑工人多年来所使用的建筑设计图一样。</Attribute>
+        <Attribute name="pub.date">2004-02-01</Attribute>
+        <Attribute name="contentType">article</Attribute>
+    </DataObject>
+</PageMap>
+-->        
+
+<style id="ibm-masthead-hidelinks">@media screen and (max-width: 457px) { .ibm-masthead-categories,#ibm-megamenu-sections{display:none} }@media screen and (max-width: 457px) { .ibm-mh-marketplace-link{display:none} }</style><style id="ibm-sitenav-menu-hidelinks">@media screen and (max-width: 437.75px) {.ibm-sitenav-menu-container .ibm-sitenav-menu-list > ul > li {display:none}}@media screen and (min-width: 438.75px) {.ibm-mobilemenu-sitenavmenu > ul > li {display:none}}</style><script type="text/javascript" async="" charset="utf-8" id="utag_ibm.web_53" src="./UML基础_ 统一建模语言简介_files/utag.53.js"></script><script type="text/javascript" async="" charset="utf-8" id="LOTCC_10026" src="./UML基础_ 统一建模语言简介_files/cc.js"></script><script type="text/javascript" async="" charset="utf-8" id="utag_ibm.web_45" src="./UML基础_ 统一建模语言简介_files/utag.45.js"></script><script type="text/javascript" async="" charset="utf-8" id="utag_ibm.web_19" src="./UML基础_ 统一建模语言简介_files/utag.19.js"></script><script type="text/javascript" async="" charset="utf-8" id="utag_ibm.web_136" src="./UML基础_ 统一建模语言简介_files/utag.136.js"></script><style type="text/css">@media only screen and (max-width:480px){.truste_box_overlay{width: 100%!important;margin: 0px!important;max-width: 100%!important;box-shadow: rgb(0,0,0,0.2) 0px 0px 16px 2px!important;}}@media only screen and (min-width:481px){.truste_box_overlay{width: 80%!important;margin: 20px auto!important;max-width: 800px!important;box-shadow: rgb(0,0,0,0.2) 0px 0px 16px 2px!important;}}</style><script language="javascript" type="text/javascript" src="./UML基础_ 统一建模语言简介_files/50200000.js"></script><script language="javascript" type="text/javascript" src="./UML基础_ 统一建模语言简介_files/rules_50200000.js"></script><script language="javascript" type="text/javascript" src="./UML基础_ 统一建模语言简介_files/dispatcher-v3.js"></script><script type="text/javascript" async="" charset="utf-8" id="tealium_visitor_service_45main" src="./UML基础_ 统一建模语言简介_files/016b3e3bf035003c261c1f2737a00307900590710093c"></script><script src="./UML基础_ 统一建模语言简介_files/yahoo-min.js" type="text/javascript"></script><script src="./UML基础_ 统一建模语言简介_files/cp-v3.js" type="text/javascript"></script><script src="./UML基础_ 统一建模语言简介_files/json-min.js" type="text/javascript"></script><script async="" src="./UML基础_ 统一建模语言简介_files/modules.7bea54effcde4abf81b9.js"></script><style type="text/css">iframe#_hjRemoteVarsFrame {display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;}</style><style type="text/css">.truste_cookie_prefs,#teconsent{display:none !important}</style><style type="text/css" class="jquery-comments-css">.jquery-comments ul.navigation li.active:after {background: #2793e6 !important;</style><style type="text/css" class="jquery-comments-css">.jquery-comments ul.navigation ul.dropdown li.active {background: #2793e6 !important;</style><style type="text/css" class="jquery-comments-css">.jquery-comments .highlight-background {background: #2793e6 !important;</style><style type="text/css" class="jquery-comments-css">.jquery-comments .highlight-font {color: #2793e6 !important;}</style><style type="text/css" class="jquery-comments-css">.jquery-comments .highlight-font-bold {color: #2793e6 !important;font-weight: bold;}</style></head>
+<body id="ibm-com" class="ibm-type ibm-sitenav-menu ibm-sitenav-menu-sticky ibm-masthead-sticky">
+	
+<div id="ibm-top" class="ibm-landing-page">
+
+<!-- MASTHEAD_BEGIN -->
+<div id="ibm-masthead" role="banner" aria-label="IBM" class="ibm-mhtype-minimal hastransition">
+    <div id="ibm-universal-nav" class="">    
+  
+        <nav role="navigation" aria-label="IBM">
+            <div id="ibm-home"><a href="https://www.ibm.com/cn/zh/?lnk=m">IBM®</a></div>
+            <ul id="ibm-menu-links" role="toolbar" aria-label="站点地图" class="ibm-hide">
+                <li><a href="https://www.ibm.com/sitemap/cn/zh/">站点地图</a></li>
+            </ul><div class="ibm-masthead-rightside"><div id="ibm-search-module" role="search" aria-labelledby="ibm-masthead" class="ibm-has-scope">
+            <div class="ibm-masthead-search-close"><p class="ibm-ind-link ibm-icononly ibm-padding-bottom-0"><a href="https://www.ibm.com/developerworks/cn/rational/r-uml/#" class="ibm-close-link ibm-nospacing">关闭</a></p></div><form id="ibm-search-form" action="https://www.ibm.com/Search/" method="get" aria-labelledby="ibm-masthead">
+                <p>
+                    <label for="q">IBM</label>
+                    <input type="text" maxlength="100" value="" placeholder="搜索" name="q" id="q" aria-label="搜索 IBM Developer" autocomplete="off" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-owns="ibm-search-typeahead-container"><input name="lnk" type="hidden" value="mhsrch">
+                    <input type="hidden" value="utf" name="en">
+                    <input type="hidden" value="zh" name="lang">
+                    <input type="hidden" value="cn" name="cc">
+                    <input type="hidden" value="20" name="nr">
+                    <input type="hidden" value="For developers" name="tabType[0]">
+                    <span class="ibm-search-scope ibm-fadeout" aria-expanded="true"><input class="ibm-styled-checkbox" data-init="false" type="checkbox" name="sn" value="" id="ibm-mh-scopeoption"> <label for="ibm-mh-scopeoption">In Marketplace</label></span><button role="button" type="submit" id="ibm-search" class="ibm-search-link" value="提交"><span class="ibm-access">提交</span></button>
+                </p>
+            </form><form class="ibm-hide" id="ibm-default-scope-form" action="https://www.ibm.com/search" method="get"><input name="lang" type="hidden" value="zh"><input name="cc" type="hidden" value="cn"><input name="tabType[0]" type="hidden" value="Products"><input name="q" type="text" value=""><input name="lnk" type="hidden" value="mhmpsrch"></form>
+        </div><div id="ibm-search-typeahead-container" aria-expanded="true" class="ibm-search-typeahead-container ibm-fadeout"></div><ul aria-label="Tools" role="menubar" class="ibm-masthead-iconsonly"><li role="presentation" class="ibm-masthead-item-signin"><button role="button" aria-haspopup="true" aria-owns="ibm-signin-minimenu-container" class="ibm-profile-link">我的 IBM</button><ul id="ibm-signin-minimenu-container" role="menu" aria-label="Profile" class="ibm-dropdown-menu">    <li class="ibm-dropdown-menu-primary" role="presentation" data-linktype="notifications">       <a class="" href="https://myibm.ibm.com/dashboard/?lnk=mmi" tabindex="0">我的 IBM</a>     </li>    <li class="ibm-dropdown-menu-primary menu-heading" role="presentation">       <span tabindex="0">IBM Developer</span>     </li>   <li class="ibm-dropdown-menu-primary ibm-signin-alt" role="presentation">     <a href="https://www.ibm.com/developerworks/dwwi/jsp/ssologin.jsp?d=https%3A%2F%2Fwww.ibm.com%2Fdeveloperworks%2Fcn%2Frational%2Fr-uml%2F&amp;lang=zh&amp;a=dwmav" role="menuitem">登录</a>   </li>   <li class="ibm-dropdown-menu-primary dw-register-alt" role="presentation">     <a href="https://www.ibm.com/developerworks/dwwi/jsp/ssoregister.jsp?d=https%3A%2F%2Fwww.ibm.com%2Fdeveloperworks%2Fcn%2Frational%2Fr-uml%2F&amp;lang=zh&amp;a=dwmav" role="menuitem">注册</a>   </li></ul></li><li role="presentation" class="ibm-masthead-item-menu"><button role="button" aria-haspopup="true" aria-owns="ibm-burger-menu-container" class="ibm-menu-link">站点导航</button></li></ul></div> 
+        </nav>
+  
+        
+       
+    </div>
+</div><div class="ibm-mobilemenu ibm-hide" id="ibm-burger-menu-container" aria-labelledby="ibm-burgermenu-a11y" role="dialog" tabindex="0"><p class="ibm-hide" id="ibm-burgermenu-a11y">站点导航</p><div class="ibm-mobilemenu-close"><p class="ibm-icononly ibm-fright ibm-ind-link ibm-nospacing"><a class="ibm-close-link" href="https://www.ibm.com/developerworks/cn/rational/r-uml/?lnk=hm#">关闭</a></p></div><div class="ibm-mobilemenu-section ibm-mobilemenu-sitenavmenu"><ul role="menubar"><li class="ibm-mobile-section-heading ibm-mobile-sitename">
+        <a href="https://www.ibm.com/developerworks/cn/?lnk=hm">IBM Developer</a>
+    </li>
+            <li role="presentation">
+                <a href="https://www.ibm.com/developerworks/cn/topics/?lnk=hm" role="menuitem" tabindex="0">学习</a>
+            </li>
+            <li role="presentation">       
+                <a href="https://www.ibm.com/developerworks/cn/downloads/?lnk=hm" role="menuitem" tabindex="-1">开发</a>
+            </li>
+            <li role="presentation">       
+                <!-- <a href="//www.ibm.com/developerworks/cn/community/" role="menuitem">社区</a> -->
+                <a href="https://www.ibm.com/developerworks/community/groups/service/html/communityview?communityUuid=3302cc3b-074e-44da-90b1-5055f1dc0d9c&amp;lnk=hm" role="menuitem" tabindex="-1">社区</a>
+            </li>
+            <li class="ibm-sitenav-menu-item-right">
+                <a href="https://www.ibm.com/ibm/cn/partners/start/?lnk=hm" role="menuitem" tabindex="-1">合作</a>
+            </li>
+        </ul></div><div class="ibm-mobilemenu-section"><ul class="ibm-mobilemenu-mhlinks" aria-label="发现 IBM"><li><div data-widget="showhide" data-type="panel" class="ibm-show-hide ibm-widget-processed"><h2><a href="javascript:void();">产品</a></h2><div class="ibm-container-body" style="display: none;"><ul><li><a href="https://www.ibm.com/cn-zh/products/?lnk=hmSTW_CN_THP_P7_TL&amp;lnk2=learn_PHP&amp;psrc=none&amp;pexp=def"><span>市场</span></a></li><li><a href="https://www.ibm.com/software/cn/info/trials/?lnk=hm"><span>热门产品免费试用</span></a></li><li><a href="https://www.ibm.com/analytics/cn/zh/?lnk=hmmpr_bua_cnzh&amp;lnk2=learn"><span>大数据与分析</span></a></li><li><a href="https://www.ibm.com/cn-zh/cloud?lnk=hmSTW_CN_MAST_CL1_TL&amp;lnk2=learn_Cloud&amp;psrc=none&amp;pexp=def"><span>云计算</span></a></li><li><a href="https://www.ibm.com/ibm/cn/cognitive/outthink/?lnk=hmmpr_buce_cnzh&amp;lnk2=learn"><span>认知</span></a></li><li><a href="https://www.ibm.com/cn-zh/internet-of-things?lnk=hmmpr_iot_cnzh&amp;lnk2=learn"><span>物联网</span></a></li><li><a href="https://www.ibm.com/cn-zh/industries?lnk=hmmpr_ind_cnzh&amp;lnk2=learn"><span>行业解决方案</span></a></li><li><a href="https://www.ibm.com/cn-zh/it-infrastructure?lnk=hmmpr_systems_cnzh&amp;lnk2=learnpanel"><span>IT 基础架构</span></a></li><li><a href="https://www.ibm.com/cn-zh/security?lnk=hmmpr_buse_cnzh&amp;lnk2=learnquick"><span>IBM 安全</span></a></li><li><a href="https://www.ibm.com/cn-zh/collaboration?lnk=hm"><span>社交协作与人才管理</span></a></li><li><a href="https://www.ibm.com/services/cn/zh/watson/explorer.html?lnk=hm"><span>Watson</span></a></li><li><a href="https://www.ibm.com/watson/cn-zh/health/?lnk=hm"><span>Watson Health</span></a></li><li><a href="https://www.ibm.com/cn-zh/industries/manufacturing/supply-chain-solutions?lnk=hm"><span>Watson 智慧供应链</span></a></li></ul></div></div></li><li><div data-widget="showhide" data-type="panel" class="ibm-show-hide ibm-widget-processed"><h2><a href="javascript:void();">服务</a></h2><div class="ibm-container-body" style="display: none;"><ul><li><a href="https://www.ibm.com/services/cn-zh/digital-reinvention/case/index.html?lnk=hm"><span>企业咨询服务</span></a></li><li><a href="https://www.ibm.com/technologyservices/cn/zh/?lnk=hmmse_ts_cnzh&amp;lnk2=learn#technology-outsourcing"><span>技术服务</span></a></li><li><a href="https://www.ibm.com/financing/cn/zh/index.html?lnk=hmmse_fin_cnzh&amp;lnk2=learn"><span>融资</span></a></li><li><a href="https://www.ibm.com/solutions/cn/zh/index.html?lnk=hm"><span>行业解决方案</span></a></li><li><a href="https://www.ibm.com/training/?lnk=hm"><span>培训与技能 (英文)</span></a></li></ul></div></div></li><li><a href="https://www.ibm.com/cn-zh/industries?lnk=hm">行业</a></li><li><div data-widget="showhide" data-type="panel" class="ibm-show-hide ibm-widget-processed"><h2><a href="javascript:void();">开发者</a></h2><div class="ibm-container-body" style="display: none;"><ul><li><a href="https://developer.ibm.com/cn/?lnk=hm"><span>IBM 开发者</span></a></li><li><a href="https://www.ibm.com/developerworks/cn/cognitive/?lnk=hm"><span>AI</span></a></li><li><a href="https://www.ibm.com/developerworks/cn/analytics/?lnk=hm"><span>大数据与分析</span></a></li><li><a href="https://developer.ibm.com/cn/blockchain/?lnk=hm"><span>区块链</span></a></li><li><a href="https://www.ibm.com/developerworks/cn/cloud/?lnk=hm"><span>云计算</span></a></li><li><a href="https://www.ibm.com/developerworks/cn/opensource/?lnk=hm"><span>开源技术</span></a></li><li><a href="https://www.ibm.com/ibm/cn/partners/start/?masthead=&amp;lnk=hm"><span>云/AI 合作伙伴</span></a></li><li><a href="https://www.ibm.com/partnerworld/?lnk=hmmdev_pw_cnzh&amp;lnk2=learn"><span>PartnerWorld (英文)</span></a></li></ul></div></div></li><li><a href="https://www.ibm.com/support/cn/zh/?lnk=hmmsu_cnzh">支持</a></li><li><a href="https://www.ibm.com/employment/cn/?lnk=hmmca_cnzh">工作机会</a></li></ul></div></div><div class="ibm-mhplaceholder"></div><!-- MASTHEAD_END -->
+	    
+<!-- LAYOUT -->
+<div id="ibm-content-wrapper">
+    <!-- LEADSPACE_BEGIN -->
+    <header role="banner" aria-labelledby="ibm-pagetitle-h1">
+        
+        <!-- MASTHEAD_SITENAV_BEGIN -->
+        <div class="ibm-sitenav-menu-container" data-widgetprocessed="true">
+    <div class="ibm-sitenav-menu-name">
+        <a href="https://www.ibm.com/developerworks/cn/">IBM Developer</a>
+    </div>
+    <div class="ibm-sitenav-menu-list">
+        <ul role="menubar">
+            <li role="presentation">
+                <a href="https://www.ibm.com/developerworks/cn/topics/" role="menuitem" tabindex="0">学习</a>
+            </li>
+            <li role="presentation">       
+                <a href="https://www.ibm.com/developerworks/cn/downloads/" role="menuitem" tabindex="-1">开发</a>
+            </li>
+            <li role="presentation">       
+                <!-- <a href="//www.ibm.com/developerworks/cn/community/" role="menuitem">社区</a> -->
+                <a href="https://www.ibm.com/developerworks/community/groups/service/html/communityview?communityUuid=3302cc3b-074e-44da-90b1-5055f1dc0d9c" role="menuitem" tabindex="-1">社区</a>
+            </li>
+            <li class="ibm-sitenav-menu-item-right">
+                <a href="https://www.ibm.com/ibm/cn/partners/start/" role="menuitem" tabindex="-1">合作</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- BEGIN IBM DEVELOPER BANNER -->
+<style>
+    #dw-mast-banner {
+        background-color: #000;
+        /* min-height: 75px; */
+    }  
+    #dw-mast-banner.ibm-band { padding: 0; }
+    #dw-mast-banner .ibm-columns { padding: 0; min-height: 100px; }
+    #dw-mast-banner .dw-mast-banner-txt { padding: 10px 0 0; margin-left: 2rem; color: #4ca7a5; display: inline; } 
+    #dw-mast-banner .dw-mast-banner-cta { padding: 14px 0 0 20px; margin-right: 2rem; color: #4ca7a5; display: inline; }
+    #dw-mast-banner .dw-mast-banner-txt p.ibm-h4 { font-size: 1.125rem; }
+    #dw-mast-banner .dw-mast-banner-txt span { white-space: nowrap; }
+    #dw-mast-banner .ibm-btn-pri {
+        background-color: #000;
+        border: 1px solid #4ca7a5;
+        color: #4ca7a5;
+    }
+    #dw-mast-banner .ibm-btn-pri:hover {
+        background-color: #4ca7a5;
+        color: #fff;
+    }
+    @media only screen and (max-width:1100px) {
+        #dw-mast-banner .dw-mast-banner-cta { padding: 10px 0 0 20px; }
+        #dw-mast-banner .dw-mast-banner-txt p.ibm-h4 { font-size: 1.0rem; }
+    }
+    @media only screen and (max-width:999px) {
+        #dw-mast-banner .dw-mast-banner-txt { margin-left: 0.5rem; } 
+        #dw-mast-banner .dw-mast-banner-cta { margin-right: 0.5rem; }
+    }
+    @media only screen and (max-width:959px) {
+        #dw-mast-banner .dw-mast-banner-txt { margin-left: 2rem; } 
+        #dw-mast-banner .dw-mast-banner-cta { margin-right: 2rem; }
+        #dw-mast-banner .ibm-btn-pri { white-space: nowrap; font-size: .875rem; }
+        #dw-mast-banner .dw-mast-banner-txt p.ibm-h4 {
+            font-size: .9375rem;
+            text-align: center;
+            font-weight: 400;
+        }
+    }
+    @media only screen and (max-width:600px) {
+        #dw-mast-banner .dw-mast-banner-txt { margin-left: 1rem; } 
+        #dw-mast-banner .dw-mast-banner-cta { margin-right: 1rem; }
+    }
+    @media only screen and (max-width:579px) {
+        #dw-mast-banner .dw-mast-banner-txt, #dw-mast-banner .dw-mast-banner-cta { display: block; }
+        #dw-mast-banner .dw-mast-banner-txt { margin-left: 1rem; margin-right: 1rem; } 
+        #dw-mast-banner .dw-mast-banner-cta { margin-right: 0; text-align: center; }
+        #dw-mast-banner .dw-mast-banner-txt p.ibm-h4 { padding: 0; }
+        #dw-mast-banner .dw-mast-banner-cta { padding: 10px 0 0 0; }
+    } 
+</style>
+<div id="dw-mast-banner" class="ibm-band">
+    <div class="ibm-vertical-center">
+        <div class="ibm-center-block ibm-vertical-center">
+            <div class="dw-mast-banner-txt ibm-plex-sans-regular">                
+                <p class="ibm-h4">developerWorks 中国 正在向 IBM Developer 过渡。 我们将为您呈现一个全新的界面和更新的主题领域，并一如既往地提供您希望获得的精彩内容。</p>             
+            </div>
+        </div>
+    </div>
+</div>        <!-- MASTHEAD_SITENAV_END -->
+        
+        <!-- NAVIGATION_TRAIL_BEGIN -->
+        <div id="ibm-leadspace-head" class="ibm-alternate">
+            <div id="ibm-leadspace-body">
+                <nav aria-label="Breadcrumb" role="navigation">                     
+                            <ul id="dw-navigation-trail" itemscope="" itemtype="http://schema.org/BreadcrumbList"><li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a itemprop="item" href="http://www.ibm.com/developerworks/cn/topics/"><span itemprop="name">学习</span></a><meta itemprop="position" content="1"></li><li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a itemprop="item" href="http://www.ibm.com/developerworks/cn/rational/"><span itemprop="name">Rational</span></a><meta itemprop="position" content="2"></li></ul>
+                </nav>
+            </div>
+        </div>
+        <!-- NAVIGATION_TRAIL_END -->
+        
+    </header>
+    <!-- LEADSPACE_END -->
+    
+    <!-- MAIN_CONTENT_BEGIN -->
+    <main role="main" aria-label=""> 
+        <div id="ibm-pcon">
+            <!-- BEGIN_IBM-CONTENT -->
+            <div id="ibm-content">
+                <!-- BEGIN_IBM-CONTENT-BODY -->
+                <div id="ibm-content-body">
+                    <!-- BEGIN_IBM-CONTENT-MAIN -->
+                    <div id="ibm-content-main" class="dw-article">                        
+                        <!-- BEGIN_INTERIOR-COLUMNS -->
+                                <div class="ibm-columns dw-article-toc">
+                                    <!-- LEFT_6_2_CONTENT_COLUMN_BEGIN -->  
+                                    <div id="dw-article-toc-container" class="ibm-col-6-2">
+                                        <div id="dw-article-toc-body" data-widget="scrollable" data-height="460" style="width: 380px; height: 460px;" class="ibm-widget-processed"><div class="nano-content" tabindex="-1">
+                                            <h2>内容</h2><div class="ibm-alternate-rule"><hr></div><ul role="directory" aria-label="内容" class="ibm-plain-list"><li class=""><a onclick="tocLink(&#39;#ibm-pagetitle-h1&#39;)" role="link" tabindex="0">概览</a></li><li class=""><a onclick="tocLink(&#39;#1&#39;)" role="link" tabindex="0">一些背景知识</a></li><li class=""><a onclick="tocLink(&#39;#2&#39;)" role="link" tabindex="0">用例图</a></li><li class=""><a onclick="tocLink(&#39;#3&#39;)" role="link" tabindex="0">类图</a></li><li class="dw-highlight"><a onclick="tocLink(&#39;#4&#39;)" role="link" tabindex="0">序列图</a></li><li class=""><a onclick="tocLink(&#39;#5&#39;)" role="link" tabindex="0">状态图</a></li><li class=""><a onclick="tocLink(&#39;#6&#39;)" role="link" tabindex="0">活动图</a></li><li class=""><a onclick="tocLink(&#39;#7&#39;)" role="link" tabindex="0">组件图</a></li><li class=""><a onclick="tocLink(&#39;#8&#39;)" role="link" tabindex="0">部署图</a></li><li class=""><a onclick="tocLink(&#39;#9&#39;)" role="link" tabindex="0">结束语</a></li><li class=""><a onclick="tocLink(&#39;#10&#39;)" role="link" tabindex="0">备注</a></li><li class=""><a onclick="tocLink(&#39;#resources&#39;)" role="link" tabindex="0">参考资料</a></li><li><a onclick="tocLink(&#39;#icomments&#39;)" role="link" tabindex="0">评论</a></li></ul>
+                                        </div><div class="nano-pane" style="display: none; opacity: 1; visibility: visible;"><div class="nano-slider" style="height: 369px; transform: translate(0px, 0px);"></div></div></div>
+                                    </div>
+                                    <!-- LEFT_6_2_CONTENT_COLUMN_END -->
+                                    
+                                    <!-- CENTER_6_4_CONTENT_COLUMN_BEGIN -->
+                                    <div class="ibm-col-6-4">
+                                            <p class="dw-article-series-head">UML基础</p>
+                                        <h1 id="ibm-pagetitle-h1" class="ibm-h1">统一建模语言简介</h1>
+                                        <!-- Article Top Bar -->
+                                                <div class="ibm-columns dw-article-topbar">
+                                                    <!-- Author and article info. -->
+                                                    <div class="ibm-col-6-2 ibm-col-medium-6-4 dw-article-metadata">
+                                                        <div class="dw-article-avatar"><img width="42" height="42" src="./UML基础_ 统一建模语言简介_files/dw-author.png" alt=""></div><div class="dw-article-authordate">Donald Bell<br><span class="dw-article-pubdate">2004 年 2 月 01 日发布</span></div>
+                                                    </div>
+                                                    <!-- Social -->
+                                                    <div class="ibm-col-6-2 ibm-col-medium-6-4 ibm-col-small-6-2 dw-article-social">
+                                                        <!-- Sharing links -->
+                                                        <div id="dw-article-share-inline">
+                                                            <div class="dw-article-sharelink-inline">
+                                                                <div class="ibm-sharethispage"><h4 class="ibm-bold">分享此页面</h4><p class="ibm-icononly"><a class="ibm-weibo-encircled-link" href="http://service.weibo.com/share/share.php?url=http%3A%2F%2Fwww.ibm.com%2Fdeveloperworks%2Fcn%2Frational%2Fr-uml%2Findex.html%&amp;title=UML%E5%9F%BA%E7%A1%80%3A%20%E7%BB%9F%E4%B8%80%E5%BB%BA%E6%A8%A1%E8%AF%AD%E8%A8%80%E7%AE%80%E4%BB%8B&amp;language=zh_cn" data-id="weibo" onclick="return IBMCore.common.module.sharethispage.gotoUrl(window.open(), this);">Weibo</a><a class="ibm-googleplus-encircled-link" href="https://plus.google.com/share?url=http%3A%2F%2Fwww.ibm.com%2Fdeveloperworks%2Fcn%2Frational%2Fr-uml%2Findex.html&amp;t=UML%E5%9F%BA%E7%A1%80%3A%20%E7%BB%9F%E4%B8%80%E5%BB%BA%E6%A8%A1%E8%AF%AD%E8%A8%80%E7%AE%80%E4%BB%8B" data-id="googleplus" onclick="return IBMCore.common.module.sharethispage.gotoUrl(window.open(), this);">Google+</a><a class="ibm-email-encircled-link" href="mailto:?subject=UML%E5%9F%BA%E7%A1%80%3A%20%E7%BB%9F%E4%B8%80%E5%BB%BA%E6%A8%A1%E8%AF%AD%E8%A8%80%E7%AE%80%E4%BB%8B&amp;body=http%3A%2F%2Fwww.ibm.com%2Fdeveloperworks%2Fcn%2Frational%2Fr-uml%2Findex.html" data-id="email" onclick="">用电子邮件发送本页面</a></p></div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- Number of comments and link to comments -->
+                                                        <div id="dw-article-cmts">
+                                                            <div class="dw-article-cmtslink">
+                                                                <a onclick="tocLink(&#39;#icomments&#39;)" href="https://www.ibm.com/developerworks/cn/rational/r-uml/#icomments" role="link" tabindex="0" aria-label="Comments">
+                                                                    <img src="./UML基础_ 统一建模语言简介_files/dw-article-cmt-icon.png" width="29" height="29" alt="Comments">
+                                                                </a>
+                                                            </div>
+                                                            <div class="dw-article-cmtslink">
+                                                                <a onclick="tocLink(&#39;#icomments&#39;)" href="https://www.ibm.com/developerworks/cn/rational/r-uml/#icomments" role="link" tabindex="0">
+                                                                    <div id="nCmts">3</div>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+<div id="dw-series-container" style="display: block;"><h3 class="ibm-h3" id="dw-series-heading">系列内容：</h3><div data-widget="showhide" data-type="panel" class="ibm-show-hide ibm-widget-processed"><h2 id="dw-series-show-hide"><a href="javascript:void();">此内容是该系列的一部分：<span id="dw-series-title-alt">UML基础</span></a></h2><div class="ibm-container-body" id="dw-series-links" style="display: none;"><ul id="dw-series-list"><li class="dw-series-item"> 统一建模语言简介</li></ul></div></div></div>
+                                        <!-- Article Body -->
+                                        
+                                        <p>到了21世纪--准确地说是2003年，UML已经获得了业界的认同。在我所见过的专业人员的简历中，75%都声称具备UML的知识。然而，在同绝大多数求职人员面谈之后，可以明显地看出他们并不真正了解UML。通常地，他们将UML用作一个术语，或对UML一知半解。大家对UML缺乏理解的这种状况，促进我撰写这篇关于UML 1.4的快速入门文章。当阅读完本文时，您还不具备足够的知识可以在简历上声称自己掌握了UML，但是您已具有了进一步钻研该语言的良好起点。
+</p><a id="sidebar"></a><div class="dw-article-sidebar ibm-background-cool-white-20"><h5 id="series">参考 UML 基础系列的其他文章和教程</h5><ul class="ibm-bullet-list"><li><a href="http://www.ibm.com/developerworks/cn/rational/321_uml/">统一建模语言(UML) 版本 2.0</a></li><li><a href="http://www.ibm.com/developerworks/cn/rational/rationaledge/content/feb05/bell/">UML 基础: 类图</a></li><li><a href="http://www.ibm.com/developerworks/cn/rational/rationaledge/content/feb05/bell/3101.html">UML 基础: 序列图</a></li><li><a href="http://www.ibm.com/developerworks/cn/rational/rationaledge/content/feb05/bell/bell.html">UML 基础: 组件图</a></li><li><a href="http://www.ibm.com/developerworks/cn/rational/tip-uml/index.html">绘制整洁的 UML 图</a></li><li><a href="http://www.ibm.com/developerworks/cn/rational/tip-uml/index2.html">用例建模技巧</a></li><li><a href="http://www.ibm.com/developerworks/cn/rational/tip-uml/index3.html">UML 序列图简介</a></li><li><a href="http://www.ibm.com/developerworks/cn/rational/tip-uml/index4.html">养成良好的绘制 UML 序列图的习惯</a></li><li><a href="http://www.ibm.com/developerworks/cn/rational/r-er/">利用 UML 进行实体关系建模</a></li></ul></div><h2 id="1" class="ibm-h2">一些背景知识</h2><p><br>
+正如前面曾提到过的，UML的本意是要成为一种标准的统一语言，使得IT专业人员能够进行计算机应用程序的建模。UML的主要创始人是Jim Rumbaugh、Ivar Jacobson和Grady Booch，他们最初都有自己的建模方法（OMT、OOSE和Booch），彼此之间存在着竞争。最终，他们联合起来创造了一种开放的标准。（听起来是不是很熟悉？这个现象类似J2EE、SOAP和Linux的诞生。）UML成为"标准"建模语言的原因之一在于，它与程序设计语言无关。（IBM Rational的UML建模工具被广泛应用于J2EE和.NET开发。）而且，UML符号集只是一种语言而不是一种方法学。这点很重要，因为语言与方法学不同，它可以在不做任何更改的情况下很容易地适应任何公司的业务运作方式。
+      </p><p>既然UML不是一种方法学，它就不需要任何正式的工作产品（即IBM Rational Unified Process?术语中所定义的"工件"）。而且它还提供了多种类型的模型描述图（diagram），当在某种给定的方法学中使用这些图时，它使得开发中的应用程序的更易理解。UML的内涵远不只是这些模型描述图，但是对于入门来说，这些图对这门语言及其用法背后的基本原理提供了很好的介绍。通过把标准的UML图放进您的工作产品中，精通UML的人员就更加容易加入您的项目并迅速进入角色。最常用的UML图包括：用例图、类图、序列图、状态图、活动图、组件图和部署图。</p><p>深入讨论每类图的细节问题已超出了这篇入门文章的范围。因此，下面仅给出了每类图的简要说明，更详细的信息将在以后的文章中探讨。
+</p><h2 id="2" class="ibm-h2">用例图</h2><p><br>
+用例图描述了系统提供的一个功能单元。用例图的主要目的是帮助开发团队以一种可视化的方式理解系统的功能需求，包括基于基本流程的"角色"（actors，也就是与系统交互的其他实体）关系，以及系统内用例之间的关系。用例图一般表示出用例的组织关系--要么是整个系统的全部用例，要么是完成具有功能（例如，所有安全管理相关的用例）的一组用例。要在用例图上显示某个用例，可绘制一个椭圆，然后将用例的名称放在椭圆的中心或椭圆下面的中间位置。要在用例图上绘制一个角色（表示一个系统用户），可绘制一个人形符号。角色和用例之间的关系使用简单的线段来描述，如图1所示。
+      </p><h5 id="N10079" class="ibm-h5"><img src="./UML基础_ 统一建模语言简介_files/image001.gif" class="ibm-downsize" alt="示例用例图" height="442" width="553"><p class="ibm-ind-link ibm-hide"><a class="ibm-popup-link" onclick="IBMCore.common.widget.overlay.show(&#39;N1007D&#39;);return false;" href="https://www.ibm.com/developerworks/cn/rational/r-uml/#N1007D">点击查看大图</a></p><p><strong>图1：示例用例图</strong></p><p><strong>图字（从上到下）：CD销售系统；查看乐队CD的销售统计；乐队经理；查看Billboard 200排行榜报告；唱片经理；查看特定CD的销售统计；检索最新的Billboard 200排行榜报告；排行榜报告服务</strong></p><p>用例图通常用于表达系统或者系统范畴的高级功能。如图1所示，可以很容易看出该系统所提供的功能。这个系统允许乐队经理查看乐队CD的销售统计报告以及Billboard 200排行榜报告。它也允许唱片经理查看特定CD的销售统计报告和这些CD在Billboard 200排行榜的报告。这个图还告诉我们，系统将通过一个名为"排行榜报告服务"的外部系统提供Billboard排行榜报告。
+</p><p>此外，在用例图中，没有列出的用例表明了该系统不能完成的功能。例如，它不能提供给乐队经理收听Billboard 200上不同专辑中的歌曲的途径 -- 也就是说，系统没有引用一个叫做"收听Billboard 200上的歌曲"的用例。这种缺少不是一件小事。在用例图中提供清楚的、简要的用例描述，项目赞助商就很容易看出系统是否提供了必须的功能。
+</p></h5><h2 id="3" class="ibm-h2">类图</h2><p><br>
+类图表示不同的实体（人、事物和数据）如何彼此相关；换句话说，它显示了系统的静态结构。类图可用于表示逻辑类，逻辑类通常就是业务人员所谈及的事物种类--摇滚乐队、CD、广播剧；或者贷款、住房抵押、汽车信贷以及利率。类图还可用于表示实现类，实现类就是程序员处理的实体。实现类图或许会与逻辑类图显示一些相同的类。然而，实现类图不会使用相同的属性来描述，因为它很可能具有对诸如Vector和HashMap这种事物的引用。
+      </p><p>类在类图上使用包含三个部分的矩形来描述，如图2所示。最上面的部分显示类的名称，中间部分包含类的属性，最下面的部分包含类的操作（或者说"方法"）。
+</p><h5 id="N10097" class="ibm-h5"><img src="./UML基础_ 统一建模语言简介_files/image002.gif" class="ibm-downsize" alt="类图中的示例类对象" height="106" width="174"><p><strong>图2：类图中的示例类对象</strong></p><p>根据我的经验，几乎每个开发人员都知道这个类图是什么，但是我发现大多数程序员都不能正确地描述类的关系。对于像图3这样的类图，您应该使用带有顶点指向父类的箭头的线段来绘制继承关系1，并且箭头应该是一个完全的三角形。如果两个类都彼此知道对方，则应该使用实线来表示关联关系；如果只有其中一个类知道该关联关系，则使用开箭头表示。
+</p></h5><h5 id="N100A6" class="ibm-h5"><img src="./UML基础_ 统一建模语言简介_files/image003.gif" class="ibm-downsize" alt="一个完整的类图" height="224" width="553"><p class="ibm-ind-link ibm-hide"><a class="ibm-popup-link" onclick="IBMCore.common.widget.overlay.show(&#39;N100AA&#39;);return false;" href="https://www.ibm.com/developerworks/cn/rational/r-uml/#N100AA">点击查看大图</a></p><p><strong>图3：一个完整的类图，包括了图2所示的类对象</strong></p><p>
+在图3中，我们同时看到了继承关系和两个关联关系。CDSalesReport类继承自Report类。一个CDSalesReport类与一个CD类关联，但是CD类并不知道关于CDSalesReport类的任何信息。CD类和Band类都彼此知道对方，两个类彼此都可以与一个或者多个对方类相关联。
+</p><p>一个类图可以整合其他许多概念，这将在本系列文章的后续文章中介绍。
+</p></h5><h2 id="4" class="ibm-h2">序列图</h2><p><br>
+序列图显示具体用例（或者是用例的一部分）的详细流程。它几乎是自描述的，并且显示了流程中中不同对象之间的调用关系，同时还可以很详细地显示对不同对象的不同调用。
+      </p><p>序列图有两个维度：垂直维度以发生的时间顺序显示消息/调用的序列；水平维度显示消息被发送到的对象实例。
+</p><p>序列图的绘制非常简单。横跨图的顶部，每个框（参见图4）表示每个类的实例（对象）。在框中，类实例名称和类名称之间用空格/冒号/空格来分隔，例如，myReportGenerator : ReportGenerator。如果某个类实例向另一个类实例发送一条消息，则绘制一条具有指向接收类实例的开箭头的连线，并把消息/方法的名称放在连线上面。对于某些特别重要的消息，您可以绘制一条具有指向发起类实例的开箭头的虚线，将返回值标注在虚线上。就我而言，我总喜欢绘制出包括返回值的虚线，这些额外的信息可以使得序列图更易于阅读。
+</p><p>阅读序列图也非常简单。从左上角启动序列的"驱动"类实例开始，然后顺着每条消息往下阅读。记住：虽然图4所示的例子序列图显示了每条被发送消息的返回消息，但这只是可选的。
+</p><h5 id="N100C5" class="ibm-h5"><img src="./UML基础_ 统一建模语言简介_files/image004.gif" class="ibm-downsize" alt="一个示例序列图" height="337" width="553"><p class="ibm-ind-link ibm-hide"><a class="ibm-popup-link" onclick="IBMCore.common.widget.overlay.show(&#39;N100C9&#39;);return false;" href="https://www.ibm.com/developerworks/cn/rational/r-uml/#N100C9">点击查看大图</a></p><p><strong>图4：一个示例序列图</strong></p><p>通过阅读图4中的示例序列图，您可以明白如何创建一个CD销售报告（CD Sales Report）。其中的aServlet对象表示驱动类实例。aServlet向名为gen的ReportGenerator类实例发送一条消息。该消息被标为generateCDSalesReport，表示ReportGenerator对象实现了这个消息处理程序。进一步理解可发现，generateCDSalesReport消息标签在括号中包括了一个cdId，表明aServlet随该消息传递一个名为cdId的参数。当gen实例接收到一条generateCDSalesReport消息时，它会接着调用CDSalesReport类，并返回一个aCDReport的实例。然后gen实例对返回的aCDReport实例进行调用，在每次消息调用时向它传递参数。在该序列的结尾，gen实例向它的调用者aServlet返回一个aCDReport。
+</p><p>请注意：图4中的序列图相对于典型的序列图来说太详细了。然而，我认为它才是足够易于理解的，并且它显示了如何表示嵌套的调用。对于初级开发人员来说，有时把一个序列分解到这种详细程度是很有必要的，这有助于他们理解相关的内容。
+</p></h5><h2 id="5" class="ibm-h2">状态图</h2><p><br>
+状态图表示某个类所处的不同状态和该类的状态转换信息。有人可能会争论说每个类都有状态，但不是每个类都应该有一个状态图。只对"感兴趣的"状态的类（也就是说，在系统活动期间具有三个或更多潜在状态的类）才进行状态图描述。
+      </p><p>如图5所示，状态图的符号集包括5个基本元素：初始起点，它使用实心圆来绘制；状态之间的转换，它使用具有开箭头的线段来绘制；状态，它使用圆角矩形来绘制；判断点，它使用空心圆来绘制；以及一个或者多个终止点，它们使用内部包含实心圆的圆来绘制。要绘制状态图，首先绘制起点和一条指向该类的初始状态的转换线段。状态本身可以在图上的任意位置绘制，然后只需使用状态转换线条将它们连接起来。
+</p><h5 id="N100E0" class="ibm-h5"><img src="./UML基础_ 统一建模语言简介_files/image005.gif" class="ibm-downsize" alt="显示类通过某个功能系统的各种状态的状态图" height="298" width="554"><p class="ibm-ind-link ibm-hide"><a class="ibm-popup-link" onclick="IBMCore.common.widget.overlay.show(&#39;N100E4&#39;);return false;" href="https://www.ibm.com/developerworks/cn/rational/r-uml/#N100E4">点击查看大图</a></p><p><strong>图5：显示类通过某个功能系统的各种状态的状态图</strong></p><p>图5中的状态图显示了它们可以表达的一些潜在信息。例如，从中可以看出贷款处理系统最初处于Loan Application状态。当批准前（pre-approval）过程完成时，根据该过程的结果，或者转到Loan Pre-approved状态，或者转到Loan Rejected状态。这个判断（它是在转换过程期间做出的）使用一个判断点来表示--即转换线条间的空心圆。通过该状态图可知，如果没有经过Loan Closing状态，贷款不可能从Loan Pre-Approved状态进入Loan in Maintenance状态。而且，所有贷款都将结束于Loan Rejected或者Loan in Maintenance状态。
+</p></h5><h2 id="6" class="ibm-h2">活动图</h2><p><br>
+活动图表示在处理某个活动时，两个或者更多类对象之间的过程控制流。活动图可用于在业务单元的级别上对更高级别的业务过程进行建模，或者对低级别的内部类操作进行建模。根据我的经验，活动图最适合用于对较高级别的过程建模，比如公司当前在如何运作业务，或者业务如何运作等。这是因为与序列图相比，活动图在表示上"不够技术性的"，但有业务头脑的人们往往能够更快速地理解它们。
+      </p><p>活动图的符号集与状态图中使用的符号集类似。像状态图一样，活动图也从一个连接到初始活动的实心圆开始。活动是通过一个圆角矩形（活动的名称包含在其内）来表示的。活动可以通过转换线段连接到其他活动，或者连接到判断点，这些判断点连接到由判断点的条件所保护的不同活动。结束过程的活动连接到一个终止点（就像在状态图中一样）。作为一种选择，活动可以分组为泳道（swimlane），泳道用于表示实际执行活动的对象，如图6所示。</p><h5 id="N100F9" class="ibm-h5"><img src="./UML基础_ 统一建模语言简介_files/image006.gif" class="ibm-downsize" alt="活动图" height="598" width="504"><p class="ibm-ind-link ibm-hide"><a class="ibm-popup-link" onclick="IBMCore.common.widget.overlay.show(&#39;N100FD&#39;);return false;" href="https://www.ibm.com/developerworks/cn/rational/r-uml/#N100FD">点击查看大图</a></p><p><strong>图6：活动图，具有两个泳道，表示两个对象的活动控制：乐队经理，以及报告工具</strong></p><p>图字（沿箭头方向）：乐队经理；报告工具；选择"查看乐队的销售报告"；检索该乐队经理所管理的乐队；显示报告条件选择屏幕；选择要查看其销售报告的乐队；从销售数据库检索销售数据；显示销售报告。
+</p><p>该活动图中有两个泳道，因为有两个对象控制着各自的活动：乐队经理和报告工具。整个过程首先从乐队经理选择查看他的乐队销售报告开始。然后报告工具检索并显示他管理的所有乐队，并要求他从中选择一个乐队。在乐队经理选择一个乐队之后，报告工具就检索销售信息并显示销售报告。该活动图表明，显示报告是整个过程中的最后一步。</p></h5><h2 id="7" class="ibm-h2">组件图</h2><p><br>
+组件图提供系统的物理视图。它的用途是显示系统中的软件对其他软件组件（例如，库函数）的依赖关系。组件图可以在一个非常高的层次上显示，从而仅显示粗粒度的组件，也可以在组件包层次2上显示。
+      </p><p>组件图的建模最适合通过例子来描述。图7显示了4个组件：Reporting Tool、Billboard Service、Servlet 2.2 API和JDBC API。从Reporting Tool组件指向Billboard Service、Servlet 2.2 API和JDBC API组件的带箭头的线段，表示Reporting Tool依赖于那三个组件。
+</p><h5 id="N10114" class="ibm-h5"><img src="./UML基础_ 统一建模语言简介_files/image007.gif" class="ibm-downsize" alt="组件图显示了系统中各种软件组件的依赖关系" height="179" width="552"><p class="ibm-ind-link ibm-hide"><a class="ibm-popup-link" onclick="IBMCore.common.widget.overlay.show(&#39;N10118&#39;);return false;" href="https://www.ibm.com/developerworks/cn/rational/r-uml/#N10118">点击查看大图</a></p><p><strong>图7：组件图显示了系统中各种软件组件的依赖关系</strong></p></h5><h2 id="8" class="ibm-h2">部署图</h2><p><br>
+部署图表示该软件系统如何部署到硬件环境中。它的用途是显示该系统不同的组件将在何处物理地运行，以及它们将如何彼此通信。因为部署图是对物理运行情况进行建模，系统的生产人员就可以很好地利用这种图。
+      </p><p>部署图中的符号包括组件图中所使用的符号元素，另外还增加了几个符号，包括节点的概念。一个节点可以代表一台物理机器，或代表一个虚拟机器节点（例如，一个大型机节点）。要对节点进行建模，只需绘制一个三维立方体，节点的名称位于立方体的顶部。所使用的命名约定与序列图中相同：[实例名称] : [实例类型]（例如，"w3reporting.myco.com : Application Server"）。
+</p><h5 id="N1012B" class="ibm-h5"><img src="./UML基础_ 统一建模语言简介_files/image007.gif" class="ibm-downsize" alt="部署图" height="179" width="552"><p class="ibm-ind-link ibm-hide"><a class="ibm-popup-link" onclick="IBMCore.common.widget.overlay.show(&#39;N1012F&#39;);return false;" href="https://www.ibm.com/developerworks/cn/rational/r-uml/#N1012F">点击查看大图</a></p><p><strong>图8：部署图。由于Reporting Tool组件绘制在IBM WebSphere内部，后者又绘制在节点w3.reporting.myco.com内部，因而我们知道，用户将通过运行在本地机器上的浏览器来访问Reporting Tool，浏览器通过公司intranet上的HTTP协议与Reporting Tool建立连接。
+</strong></p><p>图8中的部署图表明，用户使用运行在本地机器上的浏览器访问Reporting Tool，并通过公司intranet上的HTTP协议连接到Reporting Tool组件。这个工具实际运行在名为w3reporting.myco.com的Application Server上。这个图还表明Reporting Tool组件绘制在IBM WebSphere内部，后者又绘制在w3.reporting.myco.com节点内部。Reporting Tool使用Java语言通过IBM DB2数据库的JDBC接口连接到它的报告数据库上，然后该接口又使用本地DB2通信方式，与运行在名为db1.myco.com的服务器上实际的DB2数据库通信。除了与报告数据库通信外，Report Tool组件还通过HTTPS上的SOAP与Billboard Service进行通信。
+</p></h5><h2 id="9" class="ibm-h2">结束语</h2><p><br>
+尽管本文仅提供了对统一建模语言UML的简要介绍，但还是鼓励大家把从这里学到的基本信息应用到自己的项目中，同时更深入地钻研UML。已经有多种软件工具可以帮助您把UML图集成到软件开发过程中，不过即使没有自动化的工具，您也可以使用白板上的标记或者纸和笔来手工绘制UML图，仍然会获益匪浅。
+      </p><h2 id="10" class="ibm-h2">备注</h2><ol><li>欲了解关于继承和其他面向对象原理的更多信息，请参阅：
+          <br><a href="http://java.sun.com/docs/books/tutorial/java/concepts/inheritance.html">http://java.sun.com/docs/books/tutorial/java/concepts/inheritance.html</a></li><li>"组件包层次"这个短语以一种与程序设计语言无关的方式，指代诸如.Net的命名空间（例如System.Web.UI）或者Java的包（例如java.util）这样的类容器层次。
+</li></ol><h2 id="resources" class="ibm-h2">参考资料</h2><ul class="ibm-bullet-list"><li>参考 <a href="http://www.ibm.com/developerworks/cn/views/rational/articles.jsp?view_by=search&amp;search_by=uml">“UML 基础”系列</a> 的其他文章。
+<ul class="ibm-bullet-list"><li><a href="http://www.ibm.com/developerworks/cn/rational/321_uml/">统一建模语言(UML) 版本 2.0</a></li><li><a href="http://www.ibm.com/developerworks/cn/rational/rationaledge/content/feb05/bell/">UML 基础: 类图</a></li><li><a href="http://www.ibm.com/developerworks/cn/rational/rationaledge/content/feb05/bell/3101.html">UML 基础: 序列图</a></li><li><a href="http://www.ibm.com/developerworks/cn/rational/rationaledge/content/feb05/bell/bell.html">UML 基础: 组件图</a></li><li><a href="http://www.ibm.com/developerworks/cn/rational/tip-uml/index.html">绘制整洁的 UML 图</a></li><li><a href="http://www.ibm.com/developerworks/cn/rational/tip-uml/index2.html">用例建模技巧</a></li><li><a href="http://www.ibm.com/developerworks/cn/rational/tip-uml/index3.html">UML 序列图简介</a></li><li><a href="http://www.ibm.com/developerworks/cn/rational/tip-uml/index4.html">养成良好的绘制 UML 序列图的习惯</a></li><li><a href="http://www.ibm.com/developerworks/cn/rational/r-er/">利用 UML 进行实体关系建模</a></li></ul></li></ul><ul class="ibm-bullet-list"><li><a href="http://www.uml.org/">http://www.uml.org</a>--官方UML Web站点。
+        </li><li><a href="http://www.rational.com/uml/resources/documentation/index.jsp">http://www.rational.com/uml/resources/documentation/index.jsp</a>--提供具体UML规范的多种不同版本。
+        </li><li><a href="https://www.ibm.com/developerworks/cn/rational/r-uml/">http://www.rational.com/rose</a>--关于IBM Rational Rose ?这个商业UML建模工具的信息。
+        </li><li><a href="http://www.rational.com/xde">http://www.rational.com/xde</a>--关于IBM Rational XDE?这个与IBM的Eclipse开发平台紧密集成的商业UML建模工具的信息。
+        </li><li><a href="http://argouml.tigris.org/">http://argouml.tigris.org</a>--关于Argo UML这个用Java构建的开放源代码UML建模工具的信息。
+        </li><li><a href="http://uml.sourceforge.net/index.php">http://uml.sourceforge.net/index.php</a>--关于Umbrello UML Modeller这个用于KDE的开放源代码UMl建模工具的信息。
+        </li></ul><p>欲了解有关本文所讨论的产品或者服务的更多信息，请点击
+        <a href="http://www.rational.com/contact/request.jsp">这里</a>并遵照所提供的指示操作。谢谢！
+      </p><!--CMA ID: 53528--><!--Site ID: 10--><!--XSLT stylesheet used to transform this file: dw-document-html-8.0.xsl-->
+                                        <!-- Article Quiz -->
+                                        
+                                        <!-- Article Resources -->
+                                        
+                                        <!-- Commenting -->
+<!-- INLINE_COMMENTS_BEGIN: -->
+<div class="ibm-alternate-rule"><hr></div>
+<div id="dw-article-cmts-top" class="ibm-columns">
+    <div class="ibm-col-6-2">
+        <h4 id="icomments" class="ibm-h4">评论</h4>
+        <div id="dw-article-cmts-login">
+            <p>添加或订阅评论，请先<a onclick="window.location=userLinks[0].url;" tabindex="0" role="link">登录</a>或<a onclick="window.location=userLinks[1].url;" tabindex="0" role="link">注册</a>。</p>
+        </div>
+    </div>    
+    <div class="ibm-col-6-2" id="dw-notify"> 
+        <input type="checkbox" value="1" name="comment_notification" id="comment_notification" disabled="">
+        <label for="comment_notification" style="color: rgb(204, 204, 204);">有新评论时提醒我</label>	   
+    </div>
+</div>
+
+<div class="dw-article-cmts-container">       
+    <div class="ibm-no-print jquery-comments read-only" id="dw-icomments-container"><div class="commenting-field main"><img src="./UML基础_ 统一建模语言简介_files/user-icon.png" alt="" class="profile-picture round by-current-user"><div class="textarea-wrapper"><span class="close" style="display: none;"><span class="left"></span><span class="right"></span></span><div class="textarea" data-placeholder="添加评论" contenteditable="true" style="height: 3.65em;"></div><div class="control-row" style="display: none;"><span class="send save highlight-background">提交</span></div></div></div><ul class="navigation"><div class="navigation-wrapper"><li data-sort-key="newest" data-container-name="comments" class="active">最新的</li><li data-sort-key="oldest" data-container-name="comments">历史</li><li data-sort-key="popularity" data-container-name="comments">热门</li></div><div class="navigation-wrapper responsive"><li class="title active"><header>最新的</header></li><ul class="dropdown"><li data-sort-key="newest" data-container-name="comments" class="active">最新的</li><li data-sort-key="oldest" data-container-name="comments">历史</li><li data-sort-key="popularity" data-container-name="comments">热门</li></ul></div></ul><div class="data-container" data-container="comments"><ul id="comment-list" class="main"><li data-id="30535" class="comment"><div class="comment-wrapper"><img src="./UML基础_ 统一建模语言简介_files/user-icon.png" alt="" class="profile-picture round"><time data-original="1539312662924">2018 年 10 月 12 日</time><div class="name"><a href="https://www.ibm.com/developerworks/community/profiles/user/csat">csat</a></div><div class="wrapper"><div class="content">部署图配图错误，正确图例详见文章原始出处：<a href="https://www.ibm.com/developerworks/rational/library/769.html?ca=drs-" target="_blank">https://www.ibm.com/developerworks/rational/library/769.html?ca=drs-</a></div><span class="actions"><button class="action reply" type="button">回复</button><span class="separator">·</span><button class="action upvote"><span class="upvote-count">0</span><i class="fa fa-thumbs-up"></i></button><span class="separator">·</span><a class="action reply" href="https://www.ibm.com/developerworks/community/report?lang=cn&amp;referingURL=https%3A%2F%2Fwww.ibm.com%2Fdeveloperworks%2Fcn%2Frational%2Fr-uml%2F&amp;mymessage=%E8%AF%84%E8%AE%BA%3A%20%E9%83%A8%E7%BD%B2%E5%9B%BE%E9%85%8D%E5%9B%BE%E9%94%99%E8%AF%AF%EF%BC%8C%E6%AD%A3%E7%A1%AE%E5%9B%BE%E4%BE%8B%E8%AF%A6%E8%A7%81%E6%96%87%E7%AB%A0%E5%8E%9F%E5%A7%8B%E5%87%BA%E5%A4%84%EF%BC%9Ahttps%3A%2F%2Fwww.ibm.com%2Fdeveloperworks%2Frational%2Flibrary%2F769.html%3Fca%3Ddrs-%0D%E7%94%B1%20csat%20%20%E4%BA%8E%202018%20%E5%B9%B4%2010%20%E6%9C%88%2012%20%E6%97%A5%20%0D%0D---%20%E5%9C%A8%E4%B8%8B%E6%96%B9%E6%B7%BB%E5%8A%A0%E8%AF%84%E8%AE%BA%20---" target="_blank">报告滥用<i class="fa image" style="background-image: url(&quot;/developerworks/maverick/image/report-abuse.png&quot;);"></i></a></span></div></div><ul class="child-comments"></ul></li><li data-id="16666" class="comment"><div class="comment-wrapper"><img src="./UML基础_ 统一建模语言简介_files/user-icon.png" alt="" class="profile-picture round"><time data-original="1340265600000">2012 年 06 月 21 日</time><div class="name"><a href="https://www.ibm.com/developerworks/community/profiles/user/yan.dong">yan.dong</a></div><div class="wrapper"><div class="content">图7，没有文字详细说明</div><span class="actions"><button class="action reply" type="button">回复</button><span class="separator">·</span><button class="action upvote"><span class="upvote-count">0</span><i class="fa fa-thumbs-up"></i></button><span class="separator">·</span><a class="action reply" href="https://www.ibm.com/developerworks/community/report?lang=cn&amp;referingURL=https%3A%2F%2Fwww.ibm.com%2Fdeveloperworks%2Fcn%2Frational%2Fr-uml%2F&amp;mymessage=%E8%AF%84%E8%AE%BA%3A%20%E5%9B%BE7%EF%BC%8C%E6%B2%A1%E6%9C%89%E6%96%87%E5%AD%97%E8%AF%A6%E7%BB%86%E8%AF%B4%E6%98%8E%0D%E7%94%B1%20yan.dong%20%20%E4%BA%8E%202012%20%E5%B9%B4%2006%20%E6%9C%88%2021%20%E6%97%A5%20%0D%0D---%20%E5%9C%A8%E4%B8%8B%E6%96%B9%E6%B7%BB%E5%8A%A0%E8%AF%84%E8%AE%BA%20---" target="_blank">报告滥用<i class="fa image" style="background-image: url(&quot;/developerworks/maverick/image/report-abuse.png&quot;);"></i></a></span></div></div><ul class="child-comments"></ul></li><li data-id="16665" class="comment"><div class="comment-wrapper"><img src="./UML基础_ 统一建模语言简介_files/user-icon.png" alt="" class="profile-picture round"><time data-original="1300608000000">2011 年 03 月 20 日</time><div class="name"><a href="https://www.ibm.com/developerworks/community/profiles/user/zeropo">zeropo</a></div><div class="wrapper"><div class="content">最后部分关于部署图中的图8所示的图例是否画错了，与它下面的描述对不上。希望能尽快修改图片，以便学习。。。</div><span class="actions"><button class="action reply" type="button">回复</button><span class="separator">·</span><button class="action upvote"><span class="upvote-count">0</span><i class="fa fa-thumbs-up"></i></button><span class="separator">·</span><a class="action reply" href="https://www.ibm.com/developerworks/community/report?lang=cn&amp;referingURL=https%3A%2F%2Fwww.ibm.com%2Fdeveloperworks%2Fcn%2Frational%2Fr-uml%2F&amp;mymessage=%E8%AF%84%E8%AE%BA%3A%20%E6%9C%80%E5%90%8E%E9%83%A8%E5%88%86%E5%85%B3%E4%BA%8E%E9%83%A8%E7%BD%B2%E5%9B%BE%E4%B8%AD%E7%9A%84%E5%9B%BE8%E6%89%80%E7%A4%BA%E7%9A%84%E5%9B%BE%E4%BE%8B%E6%98%AF%E5%90%A6%E7%94%BB%E9%94%99%E4%BA%86%EF%BC%8C%E4%B8%8E%E5%AE%83%E4%B8%8B%E9%9D%A2%E7%9A%84%E6%8F%8F%E8%BF%B0%E5%AF%B9%E4%B8%8D%E4%B8%8A%E3%80%82%E5%B8%8C%E6%9C%9B%E8%83%BD%E5%B0%BD%E5%BF%AB%E4%BF%AE%E6%94%B9%E5%9B%BE%E7%89%87%EF%BC%8C%E4%BB%A5%E4%BE%BF%E5%AD%A6%E4%B9%A0%E3%80%82%E3%80%82%E3%80%82%0D%E7%94%B1%20zeropo%20%20%E4%BA%8E%202011%20%E5%B9%B4%2003%20%E6%9C%88%2020%20%E6%97%A5%20%0D%0D---%20%E5%9C%A8%E4%B8%8B%E6%96%B9%E6%B7%BB%E5%8A%A0%E8%AF%84%E8%AE%BA%20---" target="_blank">报告滥用<i class="fa image" style="background-image: url(&quot;/developerworks/maverick/image/report-abuse.png&quot;);"></i></a></span></div></div><ul class="child-comments"></ul></li></ul><div class="no-comments no-data"><i class="fa fa-comments fa-2x"></i><br>第一个评论</div></div></div>
+</div>
+<!-- INLINE_COMMENTS_END -->                                        <!-- CENTER_6_4_CONTENT_COLUMN_END -->
+                                    </div>   
+                                </div>
+                        <!--Rating_Meta_BEGIN--><div class="metavalue">static.content.url=http://www.ibm.com/developerworks/js/artrating/</div><div class="metavalue">SITE_ID=10</div><div class="metavalue">Zone=Rational</div><div class="metavalue">ArticleID=53528</div><div class="metavalue">ArticleTitle=UML基础: 统一建模语言简介</div><div class="metavalue">publish-date=02012004</div><script language="javascript" type="text/javascript">document.write('<div class="metavalue">url='+location.href.replace(/</g,  '%3C')+'</div>');</script><div class="metavalue">url=https://www.ibm.com/developerworks/cn/rational/r-uml/</div><!--Rating_Meta_END-->
+                    </div>
+                    <!-- END_IBM-CONTENT-MAIN -->
+                </div>
+                <!-- END_IBM-CONTENT-BODY -->
+            </div>
+            <!-- END_IBM-CONTENT -->
+        </div>
+        <!-- END_IBM-PCON -->
+    </main>
+    <!-- MAIN_CONTENT_END -->
+    
+    <!-- END_CONTENT-WRAPPER -->	
+</div>
+<!-- FOOTER_BEGIN -->
+<footer role="contentinfo" aria-label="IBM Developer">
+    <div id="dw-footer-module" class="dw-footer-home ibmdeveloper">
+        <section aria-label="参考资料" role="contentinfo">
+            <div class="ibm-columns">
+                <div class="ibm-col-6-1 dw-footer-col-1">
+                    <ul>
+                        <li class="dw-footer-heading" aria-label="IBM Developer"><a href="https://www.ibm.com/developerworks/cn/">IBM <b>Developer</b></a></li>
+                        <li><a href="https://www.ibm.com/developerworks/secure/feedback.jsp?domain=dwchina">站点反馈</a></li>
+                        <li class="dw-footer-newline"><a href="https://www.ibm.com/developerworks/secure/myideas2.jsp?domain=dwchina">我要投稿</a></li>
+                        <li class="dw-footer-newline"><a href="https://www.ibm.com/developerworks/community/report?lang=zh">报告滥用</a></li>
+                        <li class="dw-footer-newline"><a href="https://www.ibm.com/developerworks/cn/community/terms/thirdparty/">第三方提示</a></li>
+                    </ul>
+                    <ul>
+                        <li class="dw-footer-newline"><a href="https://weibo.com/ibmdw/">关注微博</a></li>
+                    </ul>
+                </div>
+                <div class="ibm-col-6-1 dw-footer-col-2">
+                    <ul>
+                        <li class="dw-footer-heading"><a href="https://www-31.ibm.com/ibm/cn/ur/">大学合作</a></li>
+                    </ul>
+                    <ul class="dw-footer-lang" aria-label="选择语言">
+                        <li class="dw-footer-heading">选择语言</li>
+                        <li><a href="https://developer.ibm.com/">English</a></li>
+                        <li><a href="https://www.ibm.com/developerworks/cn/" lang="zh">中文</a></li>
+                        <li><a href="https://www.ibm.com/developerworks/jp/" lang="ja">日本語</a></li>
+                        <li><a href="https://www.ibm.com/developerworks/ru/" lang="ru">Русский</a></li>
+                        <li class="dw-footer-newline"><a href="https://www.ibm.com/developerworks/br/" lang="pt">Português (Brasil)</a></li>
+                        <li><a href="https://www.ibm.com/developerworks/ssa/" lang="es">Español</a></li>
+                        <li><a href="https://developer.ibm.com/kr/" lang="kr">한글</a></li>
+                    </ul>
+                </div>
+                <div class="ibm-col-6-1 dw-footer-col-3"> </div>
+                <div class="ibm-col-6-1 dw-footer-col-4"> </div>
+                <div class="ibm-col-6-1 dw-footer-col-5">
+                    <ul class="dw-footer-categories">
+                        <li class="dw-footer-category">
+                            <a href="https://developer.ibm.com/cn/journey/">Code patterns</a>  
+                        </li>
+                        <li class="dw-footer-category">
+                            <a href="https://www.ibm.com/developerworks/cn/views/global/libraryview.jsp">技术文档库</a>
+                        </li>
+                        <li class="dw-footer-category">
+                            <a href="https://www.ibm.com/developerworks/cn/downloads/">软件下载</a>  
+                        </li>
+                        <li class="dw-footer-category">
+                            <a href="https://developer.ibm.com/cn/">开发者中心</a>  
+                        </li>
+                        <li class="dw-footer-category">
+                            <a href="https://www.ibm.com/developerworks/cn/rss/">订阅源</a>  
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="ibm-col-6-1 dw-footer-col-6">
+                    <ul class="dw-footer-categories">
+                        <li class="dw-footer-category">
+                            <a href="https://www.pages03.net/ibmdeveloperworks/developerWorksChina-NewsletterSubscriptionPage-secure18rev1/">时事通讯</a>  
+                        </li>
+                        <li class="dw-footer-category">
+                            <a href="https://developer.ibm.com/cn/tv/">视频</a>  
+                        </li>
+                        <li class="dw-footer-category">
+                            <a href="https://developer.ibm.com/cn/dwblog/">博客</a>  
+                        </li>
+                        <li class="dw-footer-category">
+                            <a href="https://developer.ibm.com/cn/events/">活动</a>  
+                        </li>                        
+                        <li class="dw-footer-category">
+                            <a href="https://www.ibm.com/developerworks/cn/community/">社区</a>  
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div id="dw-footer" class="ibm-padding-normal ibm-alternate">
+        <div class="ibm-columns">
+            <div class="ibm-col-1-1">
+                <div class="dw-footer-corporate-links">
+                <ul>
+                    <li><a href="https://www.ibm.com/contact/cn/zh/">联系 IBM</a></li>
+                    <li><a href="https://www.ibm.com/privacy/cn/zh/">隐私条约</a></li>
+                    <li><a href="https://www.ibm.com/developerworks/cn/community/terms/use/">使用条款</a></li>
+                    <li><a href="https://www.ibm.com/accessibility/cn/zh/">信息无障碍选项</a></li>
+                    <li class="ibm-feedbacklink"><a href="https://www.ibm.com/developerworks/cn/rational/r-uml/#">反馈</a></li>
+                    <li id="ibm-truste-cp"><a onclick="truste.eu.clickListener();return false;" href="https://www.ibm.com/developerworks/cn/rational/r-uml/#">Cookie 首选项</a></li>
+                </ul>                 
+                </div>    
+            </div>
+        </div>
+    </div>        
+</footer> <!-- FOOTER_END -->
+
+<!-- END_IBM-TOP -->
+</div>
+
+<!-- SCRIPTS_INCLUDE_BEGIN -->
+<!-- Styles -->
+<link rel="stylesheet" type="text/css" href="./UML基础_ 统一建模语言简介_files/jquery-comments.css">
+<link rel="stylesheet" href="./UML基础_ 统一建模语言简介_files/font-awesome.min.css">
+
+<!-- Libraries -->
+<script type="text/javascript" src="./UML基础_ 统一建模语言简介_files/jquery-comments.min.js"></script>
+<script type="text/javascript" src="./UML基础_ 统一建模语言简介_files/moment-with-locales.js"></script>
+<script type="text/javascript" src="./UML基础_ 统一建模语言简介_files/ContentComments.js"></script>
+<script type="text/javascript" src="./UML基础_ 统一建模语言简介_files/ContentCommentsFormatter.js"></script>
+<script type="text/javascript" language="JavaScript">
+
+	IBMCore.common.module.masthead.subscribe("ready", "customjs", setupCommentsPlugin).runAsap(setupCommentsPlugin);
+
+	function setupCommentsPlugin(){
+		//debugger;
+			//alert(userLinks);
+			var commentsInitInfo = {
+				contentId : $("div[class=metavalue]:contains('ArticleID=')").text().split("=")[1],
+				siteId :  $("div[class=metavalue]:contains('SITE_ID=')").text().split("=")[1],
+				pluginDivId : '#dw-icomments-container',
+				notifyElementId : "#comment_notification",
+				loginMessageDivId : "#dw-article-cmts-login",
+				totalCommentsDivId : "#nCmts",
+						isIdea:false
+
+			};				
+								
+			ContentComments.Setup(commentsInitInfo);
+	}
+</script>
+
+<!-- SCRIPTS_INCLUDE_END -->
+
+
+
+<div id="ibm-overlay-backdrop"></div><div class="ibm-common-overlay ibm-overlay-alt-three" id="ibm-overlaywidget-N1007D" role="dialog" aria-describedby="ibm-overlaywidget-N1007D-content" aria-label="Overlay content" data-widget="overlay container" data-name=""><div class="ibm-overlay-heading-con"><p class="ibm-icononly"><a href="javascript:void(0);" class="ibm-close-link" role="button">关闭</a></p></div><div id="ibm-overlaywidget-N1007D-content" class="content"><div class="ibm-widget-processed" data-widget="overlay" id="N1007D"><img alt="示例用例图" src="./UML基础_ 统一建模语言简介_files/image001.gif" width="553"></div></div></div><div class="ibm-common-overlay ibm-overlay-alt-three" id="ibm-overlaywidget-N100AA" role="dialog" aria-describedby="ibm-overlaywidget-N100AA-content" aria-label="Overlay content" data-widget="overlay container" data-name=""><div class="ibm-overlay-heading-con"><p class="ibm-icononly"><a href="javascript:void(0);" class="ibm-close-link" role="button">关闭</a></p></div><div id="ibm-overlaywidget-N100AA-content" class="content"><div class="ibm-widget-processed" data-widget="overlay" id="N100AA"><img alt="一个完整的类图" src="./UML基础_ 统一建模语言简介_files/image003.gif" width="553"></div></div></div><div class="ibm-common-overlay ibm-overlay-alt-three" id="ibm-overlaywidget-N100C9" role="dialog" aria-describedby="ibm-overlaywidget-N100C9-content" aria-label="Overlay content" data-widget="overlay container" data-name=""><div class="ibm-overlay-heading-con"><p class="ibm-icononly"><a href="javascript:void(0);" class="ibm-close-link" role="button">关闭</a></p></div><div id="ibm-overlaywidget-N100C9-content" class="content"><div class="ibm-widget-processed" data-widget="overlay" id="N100C9"><img alt="一个示例序列图" src="./UML基础_ 统一建模语言简介_files/image004.gif" width="553"></div></div></div><div class="ibm-common-overlay ibm-overlay-alt-three" id="ibm-overlaywidget-N100E4" role="dialog" aria-describedby="ibm-overlaywidget-N100E4-content" aria-label="Overlay content" data-widget="overlay container" data-name=""><div class="ibm-overlay-heading-con"><p class="ibm-icononly"><a href="javascript:void(0);" class="ibm-close-link" role="button">关闭</a></p></div><div id="ibm-overlaywidget-N100E4-content" class="content"><div class="ibm-widget-processed" data-widget="overlay" id="N100E4"><img alt="显示类通过某个功能系统的各种状态的状态图" src="./UML基础_ 统一建模语言简介_files/image005.gif" width="554"></div></div></div><div class="ibm-common-overlay ibm-overlay-alt-three" id="ibm-overlaywidget-N100FD" role="dialog" aria-describedby="ibm-overlaywidget-N100FD-content" aria-label="Overlay content" data-widget="overlay container" data-name=""><div class="ibm-overlay-heading-con"><p class="ibm-icononly"><a href="javascript:void(0);" class="ibm-close-link" role="button">关闭</a></p></div><div id="ibm-overlaywidget-N100FD-content" class="content"><div class="ibm-widget-processed" data-widget="overlay" id="N100FD"><img alt="活动图" src="./UML基础_ 统一建模语言简介_files/image006.gif" width="504"></div></div></div><div class="ibm-common-overlay ibm-overlay-alt-three" id="ibm-overlaywidget-N10118" role="dialog" aria-describedby="ibm-overlaywidget-N10118-content" aria-label="Overlay content" data-widget="overlay container" data-name=""><div class="ibm-overlay-heading-con"><p class="ibm-icononly"><a href="javascript:void(0);" class="ibm-close-link" role="button">关闭</a></p></div><div id="ibm-overlaywidget-N10118-content" class="content"><div class="ibm-widget-processed" data-widget="overlay" id="N10118"><img alt="组件图显示了系统中各种软件组件的依赖关系" src="./UML基础_ 统一建模语言简介_files/image007.gif" width="552"></div></div></div><div class="ibm-common-overlay ibm-overlay-alt-three" id="ibm-overlaywidget-N1012F" role="dialog" aria-describedby="ibm-overlaywidget-N1012F-content" aria-label="Overlay content" data-widget="overlay container" data-name=""><div class="ibm-overlay-heading-con"><p class="ibm-icononly"><a href="javascript:void(0);" class="ibm-close-link" role="button">关闭</a></p></div><div id="ibm-overlaywidget-N1012F-content" class="content"><div class="ibm-widget-processed" data-widget="overlay" id="N1012F"><img alt="部署图" src="./UML基础_ 统一建模语言简介_files/image007.gif" width="552"></div></div></div><div id="ibm-mobilemenu-screen"></div><div id="teconsent" class="truste_cookie_prefs" style="position: fixed; display: none; height: 40px; background-color: rgb(255, 255, 255); z-index: 2147483647; bottom: 0px; right: 0px; margin: 0px; padding: 0px 16px; line-height: 40px; vertical-align: middle; box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 10px 3px;" consent="0,1,2"><script type="text/javascript" src="./UML基础_ 统一建模语言简介_files/notice" id="truste_0.34324153802490276"></script><script async="async" type="text/javascript" crossorigin="" src="./UML基础_ 统一建模语言简介_files/v1.7-2"></script><a id="icon-id06006993280319097" tabindex="0" role="button" lang="fr" style="cursor: pointer; font-family: ibm-plex-sans; font-size: 12pt; color: #3d3d3d; text-decoration: none">Préférences de cookies</a></div><iframe id="LOTCCFrame_1560117494636" src="./UML基础_ 统一建模语言简介_files/rt=ifr.html" title="empty" tabindex="-1" role="presentation" aria-hidden="true" style="border: 0px; width: 0px; height: 0px; display: block;"></iframe><script src="./UML基础_ 统一建模语言简介_files/js(1)" id="mm_pp_background"></script><div id="survey-overlay-backdrop" style="opacity: 0.5;background: #111;bottom: 0;left: 0;position: fixed;right: 0; top: 0; z-index: 900; display:none"></div><iframe name="_hjRemoteVarsFrame" title="_hjRemoteVarsFrame" id="_hjRemoteVarsFrame" src="./UML基础_ 统一建模语言简介_files/box-90f3a29ef7448451db5af955688970d7.html" style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;"></iframe><iframe src="./UML基础_ 统一建模语言简介_files/iframe.html" id="mm_sync_back_ground" style="visibility: hidden; display: none;"></iframe><div id="ads"></div></body></html>

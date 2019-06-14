@@ -1,0 +1,43 @@
+#header {
+    Background-color:gray;
+    Color:black;
+    text-align:center;
+    padding:5px;
+}
+
+.bg  { 
+  opacity:	0.5;
+  }
+.kqky {
+ float: right;	
+}	
+#hanshifen {
+ float: left;	
+}	
+
+
+.bingpian{
+color:	gray;
+	
+
+}
+.bima{
+color:	gray;
+
+}
+#bima{
+color:	red;
+Float:	right;	
+
+}
+#zhizhu{
+color:	gray;
+
+}
+#nav {
+    line-height:30px;
+    background-color:#eeeeee;
+    padding:5px; 
+    text-align:center;
+    Font-size:15;
+}
